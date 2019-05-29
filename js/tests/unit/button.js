@@ -192,6 +192,8 @@ $(function () {
     var $btn = $group.children().eq(0)
     var $input = $btn.children().eq(0)
 
+    assert.ok($btn.is(':not(.active)'), 'button is initially not active')
+    assert.ok(!$input.prop('checked'), 'checkbox is initially not checked')
     $btn.click()
     assert.ok($btn.is(':not(.active)'), 'button did not become active')
     assert.ok(!$input.prop('checked'), 'checkbox did not get checked')
